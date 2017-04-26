@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="teamcortana.mycontactlist.ContactListActivity">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:id="@+id/linearLayout" />
+
+    <RelativeLayout
+        xmlns:android ="http://schemas.android.com/apk/res/android"
+        xmlns:tools ="http://schemas.android.com/tools"
+        android:layout_width ="match_parent"
+        android:layout_height ="match_parent"
+        tools:context =".ContactListActivity"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+
+       <ListView
+                    android:id="@id/android:list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft= "true"
+                    android:layout_above= "@+id/navbar"
+                    android:layout_below="@+id/toolbar">
+       </ListView>
+
+        <RelativeLayout
+            android:id="@+id/navbar"
+            android:background="@color/navbar_background"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <ImageButton
+                android:id="@+id/imageButtonList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageButtonMap"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/contact_1" />
+            <ImageButton
+                android:id="@+id/imageButtonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/contact_map" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/imageButtonMap"
+                android:src="@mipmap/contacts_setting" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id= "@+id/toolbar"
+                android:layout_width= "match_parent"
+                android:layout_height= "wrap_content"
+                android:layout_alignParentLeft= "true"
+                android:layout_alignParentTop= "true"
+                android:background= "@color/toolbar_background" >
+            <Button
+                android:id= "@+id/buttonDelete"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:layout_alignParentLeft= "true"
+                android:layout_marginLeft= "20dp"
+                android:text= "Delete" />
+            <Button
+                android:id= "@+id/buttonAdd"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:layout_alignParentRight= "true"
+                android:layout_marginRight= "20dp"
+                android:text= "Add Contact" />
+            <TextView
+                android:id="@+id/textBatteryLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="168dp"
+                android:layout_marginTop="19dp"
+
+                android:text="TextView" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+    
+

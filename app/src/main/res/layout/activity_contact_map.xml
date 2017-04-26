@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="teamcortana.mycontactlist.ContactMapActivity">
+
+    <RelativeLayout
+        xmlns:android ="http://schemas.android.com/apk/res/android"
+        xmlns:tools ="http://schemas.android.com/tools"
+        android:layout_width ="match_parent"
+        android:layout_height ="match_parent"
+        tools:context =".ContactMapActivity" >
+
+        <RelativeLayout
+            android:id="@+id/navbar"
+            android:background="@color/navbar_background"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <ImageButton
+                android:id="@+id/imageButtonList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageButtonMap"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/contact_1" />
+            <ImageButton
+                android:id="@+id/imageButtonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/contact_map" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/imageButtonMap"
+                android:src="@mipmap/contacts_setting" />
+
+        </RelativeLayout>
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/navbar"
+            android:layout_below="@+id/toolbar"
+            class="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/toolbar_background" >
+
+            <Button
+                android:id="@+id/buttonShowMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="Location On" />
+            <TextView
+                android:id = "@+id/textHeading"
+                android:layout_width ="wrap_content"
+                android:layout_height ="wrap_content"
+                android:layout_centerHorizontal ="true"
+                android:layout_centerVertical ="true"
+                android:text ="WNW"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <Button
+                android:id="@+id/buttonMapType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="Satellite View" />
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
